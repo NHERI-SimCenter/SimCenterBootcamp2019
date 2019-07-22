@@ -1,0 +1,21 @@
+#!/bin/bash
+
+#----------------------------------------------------
+# Generic SLURM script -- Mixed MPI - OpenMP/pThread
+#
+# This script requests 2 nodes and 4 tasks, 2 tasks per node and 8 threads/taske
+#----------------------------------------------------
+#SBATCH -J myjob          # Job name
+#SBATCH -o myjob.%j.out   # stdout; %j expands to jobid
+#SBATCH -e myjob.%j.err   # stderr; skip to combine stdout and stderr
+#SBATCH -p development    # queue
+#SBATCH -N 2              # Number of nodes, not cores 
+#SBATCH -n 4              # Total number of MPI tasks 
+#SBATCH -t 00:30:00       # max time
+
+#SBATCH -A AB-01234       # class project/account code;
+                          # necessary if you have multiple project accounts
+
+export OMP_NUM_THREADS=8  # threads/task
+
+ibrun tacc_affinity ./main.exe   
