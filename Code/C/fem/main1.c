@@ -1,5 +1,5 @@
 #include "node.h"
-#include "domain.h"
+#include "domain1.h"
 
 int main(int argc, char **argv) {
   Domain theDomain;
