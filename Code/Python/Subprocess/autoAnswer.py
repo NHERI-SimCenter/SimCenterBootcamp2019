@@ -1,6 +1,6 @@
 import subprocess
 
-p = subprocess.Popen(['greet'], stdin=subprocess.PIPE)
+p = subprocess.Popen(['./greet'], stdin=subprocess.PIPE)
 
 firstname = 'Peter'
 lastname  = 'Mackenzie-Helnwein'
