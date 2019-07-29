@@ -4,3 +4,9 @@ Code/Python/Subprocess/Code/greet
 Code/Python/Subprocess/greet
 
 *.pyc
+
+Code/Python/MultiFile/\.DS_Store
+
+Code/Python/Plotting/\.DS_Store
+
+Code/Python/Subprocess/\.DS_Store
